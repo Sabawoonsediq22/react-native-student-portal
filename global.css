@@ -3,3 +3,100 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+/*
+ * Attendly visual tokens. Keep palette, type, and shape values here so the
+ * generated NativeWind utilities and the app's global styles stay in sync.
+ */
+@theme {
+  --color-background: #fafafa;
+  --color-foreground: #212121;
+  --color-card: #ffffff;
+  --color-border: #e8e8e8;
+  --color-primary: #186bf2;
+  --color-on-primary: #ffffff;
+  --color-secondary: #eff1f1;
+  --color-muted: #ececef;
+  --color-muted-foreground: #666666;
+  --color-accent: #f9fafc;
+  --color-input: #949494;
+  --color-destructive: #da281b;
+  --color-success: #178c42;
+  --color-warning: #fa5660;
+  --color-info: #1e6deb;
+  --color-sidebar: #f7f7f7;
+  --color-popover: #f5f5f5;
+  --color-brand-ink: #023fa9;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+  --text-body: 14px;
+  --text-body--line-height: 20px;
+  --text-input: 16px;
+  --text-input--line-height: 24px;
+  --text-subtitle: 18px;
+  --text-subtitle--line-height: 24px;
+  --text-title: 20px;
+  --text-title--line-height: 28px;
+}
+
+/* The app can opt into the dark palette with NativeWind's `dark:` mode. */
+.dark {
+  --color-background: #1a1a1a;
+  --color-foreground: #f2f2f2;
+  --color-card: #212121;
+  --color-border: #2e2e2e;
+  --color-primary: #5b96f5;
+  --color-on-primary: #141414;
+  --color-secondary: #34373d;
+  --color-muted: #2c2f35;
+  --color-muted-foreground: #a6a6a6;
+  --color-accent: #2f343c;
+  --color-input: #575757;
+  --color-destructive: #f55347;
+  --color-success: #4eda81;
+  --color-warning: #f7cb45;
+  --color-info: #6ea3f7;
+  --color-sidebar: #262626;
+  --color-popover: #2b2b2b;
+  --color-brand-ink: #5b96f5;
+}
+
+@utility text-caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@utility text-body {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@utility text-input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@utility text-subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+@utility text-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
